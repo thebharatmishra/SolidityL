@@ -39,12 +39,13 @@ Person[4] public gistOfPeople;
 
 // Functions in Solidity
  // Underscore _ before a declaration is  
-function wowAFunc(uint _aArg)public{
+ // This is a virtual function which can be overidden by its child classes.
+function storeFunc(uint _aArg)public virtual{
 initNum = int256(_aArg); // Explicit type conversion.
 }
 // view - Read-only functions.
 // pure - No Reading No Writing.
-function someFunc() public view returns(uint256){
+function retrieveFunc() public view returns(uint256){
     return uint256(initNum);
 }
 
